@@ -14,7 +14,7 @@ Here's some timeline of reporting the bug.
 3. (7/2) received bug bounty (500USD).
 
 
-**I wrote this exploit contract in a rush since the fund was in danger. The exploit contract itself might be buggy. Do not use this contract on mainnet.**
+**I wrote this exploit contract to deomonstrate the exploit to the dev team. I'd done it in a rush since the fund was in danger. The exploit contract itself might be buggy. Do not use this contract on mainnet.**
 
 I open this repo for building my resume in order to get in to [Secureum Bootcamp](https://hackmd.io/@secureum/bootcamp-epoch0-announcement). Hope I can make it.
 
