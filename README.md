@@ -25,7 +25,7 @@ There old implementation had an flush function that every can triggers.
 ```solidity
    function flush(uint256 currencyAmount, uint256 minMintAmount) external {
 ```
-`flush` should be a function that the team called to flush the tusd in the pool into crv pools to utilize the funds in the pool.
+`flush` should be a function that the team called to flush tusd in the pool into crv pools to utilize the funds in the pool.
 This `flush` function would end up add liquidity pool into 3crv pool.
 
 
@@ -39,7 +39,7 @@ The exploit steps are as follow:
 7. Repay DAI, TUSD to aave
 8. Get 15M TUSD profit.
 
-### why we need flash bot to drain all token
+### Why we need flash bot to drain all token
 
 The attack pattern is simliar to [yDai incident](https://peckshield.medium.com/the-ydai-incident-analysis-forced-investment-2b8ac6058eb5).
 
@@ -83,13 +83,13 @@ Here's setting of hardhat
 }
 ```
 
-## How to find this bug.
-Since this bug shares a similar pattern with previous classic attack. We could use ProMutator to find this.
+## How to find this bug
+Since this bug shares a similar pattern with previous classic attack. We could use [](mutator) to find this.
 
 We will publish the paper and opensource the tool this Sepetember.
 
 
-## reference
+## Reference
 
-1. (aave/code-examples-protocol)[https://github.com/aave/code-examples-protocol]
-2. (The yDAI Incident Analysis: Forced Investment)[https://peckshield.medium.com/the-ydai-incident-analysis-forced-investment-2b8ac6058eb5]
+1. [aave/code-examples-protocol](https://github.com/aave/code-examples-protocol)
+2. [The yDAI Incident Analysis: Forced Investment](https://peckshield.medium.com/the-ydai-incident-analysis-forced-investment-2b8ac6058eb5)
