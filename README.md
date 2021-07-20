@@ -18,7 +18,7 @@ Here's some timeline of reporting the bug.
 
 I open this repo for building my resume in order to get in to [Secureum Bootcamp](https://hackmd.io/@secureum/bootcamp-epoch0-announcement). Hope I can make it.
 
-## details
+## Details
 The bug located at the old implementation of tfUSD. https://etherscan.io/address/0x27f461c698844ff51b33ecffa5dc2bd9721060b1#code.
 
 There old implementation had an flush function that every can triggers.
@@ -33,9 +33,9 @@ The exploit steps are as follow:
 1. borrow TUSD and DAI from aave.
 2. Deposit DAI into compound to borrow TUSD.
 3. Mutate the TUSD price at 3crv prool (`0x45F783CCE6B7FF23B2ab2D70e416cdb7D6055f51`)
-4. trigger `flush` and force the pool add liquidity to 3crv where TUSD price becomes extremely low.
+4. trigger `flush` and force the pool to add liquidity to 3crv at bad price.
 5. **Buy back TUSD at 3crv pool** (Gain profit at this step.)
-6. Repay to TUSD to compound
+6. Repay TUSD to compound
 7. Repay DAI, TUSD to aave
 8. Get 15M TUSD profit.
 
@@ -62,8 +62,8 @@ Thus, the attack should be executed in different txs.
 Note that: since the attacker got 15m profit at the first tx. supply token and withdrawing token at step 1 and 3 doesn't need a flashloan. Just try to send txs at the same time to minimize the risk. (in case users exit the pool before the attack is completed.)
 
 ## How to reproduce
-1. npm i
-2. npx hardhat test
+1. `npm i`
+2. `npx hardhat test`
 
 Here's setting of hardhat
 ```js
