@@ -84,7 +84,7 @@ Here's setting of hardhat
 ```
 
 ## How to find this bug
-Since this bug shares a similar pattern with previous classic attack. We could use [https://github.com/csienslab/ProMutator](ProMutator) to find this. Plese refer to the repo and the paper.
+Since this bug shares a similar pattern with previous classic attack. We could use https://github.com/csienslab/ProMutator to find this. Plese refer to the repo and the paper.
 
 ## Reference
 
